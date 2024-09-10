@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+    body {
+        font-family: "Archivo", sans-serif;
+    }
+</style>
+<body class="h-screen flex justify-center items-center bg-gradient-to-b from-slate-900 to-slate-600">
+    <div class="p-4 rounded-xl bg-black shadow-md">
+        <h1 class="text-gray-500 text-center text-2xl">Calculator</h1>
+        <input 
+            type="text"
+            class="border border-purple-300 p-3 my-4 bg-purple-300 rounded-md w-80 text-right h-20 shadow-sm focus:outline-none font-light text-4xl"
+            id="display"
+            readonly
+        >
+        <div class="flex justify-between item-center font-bold">
+            <button class="shadow-md w-14 h-14 rounded-md my-2 hover:bg-purple-400 text-gray-200 bg-violet-600" onclick="appendOperator(' % ')"><i class="fa-solid fa-percent"></i></button>
+            <button class="shadow-md h-14 rounded-md my-2 hover:bg-rose-400  text-gray-200 bg-rose-500 w-[9rem]" onclick="clearDisplay()">C</button>
+            <button class="shadow-md w-14 h-14 rounded-md my-2 hover:bg-purple-400 text-gray-200 bg-violet-600" onclick="appendOperator(' / ')"><i class="fa-solid fa-divide"></i></button>
+        </div>
+        <div class="flex justify-between item-center font-bold">
+            <button class="shadow-md w-14 h-14 rounded-md my-2 hover:bg-purple-400 text-gray-200 bg-violet-600" onclick="appendNumber('7')">7</button>
+            <button class="shadow-md w-14 h-14 rounded-md my-2 hover:bg-purple-400 text-gray-200 bg-violet-600" onclick="appendNumber('8')">8</button>
+            <button class="shadow-md w-14 h-14 rounded-md my-2 hover:bg-purple-400 text-gray-200 bg-violet-600" onclick="appendNumber('9')">9</button>
+            <button class="shadow-md w-14 h-14 rounded-md my-2 hover:bg-purple-400 text-gray-200 bg-violet-600" onclick="appendOperator(' * ')"><i class="fa-solid fa-x"></i></button>
+        </div>
+        <div class="flex justify-between item-center font-bold">
+            <button class="shadow-md w-14 h-14 rounded-md my-2 hover:bg-purple-400 text-gray-200 bg-violet-600" onclick="appendNumber('4')">4</button>
+            <button class="shadow-md w-14 h-14 rounded-md my-2 hover:bg-purple-400 text-gray-200 bg-violet-600" onclick="appendNumber('5')">5</button>
+            <button class="shadow-md w-14 h-14 rounded-md my-2 hover:bg-purple-400 text-gray-200 bg-violet-600" onclick="appendNumber('6')">6</button>
+            <button class="shadow-md w-14 h-14 rounded-md my-2 hover:bg-purple-400 text-gray-200 bg-violet-600" onclick="appendOperator(' + ')"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="flex justify-between item-center font-bold">
+            <button class="shadow-md w-14 h-14 rounded-md my-2 hover:bg-purple-400 text-gray-200 bg-violet-600" onclick="appendNumber('1')">1</button>
+            <button class="shadow-md w-14 h-14 rounded-md my-2 hover:bg-purple-400 text-gray-200 bg-violet-600" onclick="appendNumber('2')">2</button>
+            <button class="shadow-md w-14 h-14 rounded-md my-2 hover:bg-purple-400 text-gray-200 bg-violet-600" onclick="appendNumber('3')">3</button>
+            <button class="shadow-md w-14 h-14 rounded-md my-2 hover:bg-purple-400 text-gray-200 bg-violet-600" onclick="appendOperator(' - ')"><i class="fa-solid fa-minus"></i></button>
+        </div>
+        <div class="flex justify-between item-center font-bold">
+            <button class="shadow-md w-[9rem] h-14 rounded-md my-2 hover:bg-purple-400 text-gray-200 bg-violet-600" onclick="appendNumber('0')">0</button>
+            <button class="shadow-md w-[9rem] h-14 rounded-md my-2 hover:bg-amber-400 text-gray-200 bg-amber-500" onclick="calculate()"><i class="fa-solid fa-equals text-black"></i></button>
+        </div>
+    </div>
+</body>
+<script src="./main.js"></script>
+</html>
