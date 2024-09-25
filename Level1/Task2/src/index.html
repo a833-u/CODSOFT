@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobSpire</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="font-figtree">
+    <header class="p-3 md:p-5 bg-black">
+      <nav
+        class="flex flex-col md:flex-row items-center justify-between text-white"
+      >
+        <div
+          class="logo mb-5 md:mb-0 flex items-center justify-between w-full md:w-40"
+        >
+          <h1 class="flex items-center gap-3 text-2xl font-bold">
+            <i class="fas fa-suitcase fa-lg"></i>JobSpire
+          </h1>
+          <div class="burger block md:hidden">
+            <span class="material-symbols-outlined"> menu </span>
+          </div>
+        </div>
+        <div class="navbar mb-5 md:mb-0">
+          <ul
+            class="flex flex-row justify-between md:flex-row gap-2 md:gap-4 font-normal text-center"
+          >
+            <a href=""><li>Home</li></a>
+            <a href=""><li class="text-slate-400">Jobs</li></a>
+            <a href=""><li class="text-slate-400">About us</li></a>
+            <a href=""><li class="text-slate-400">Contact us</li></a>
+          </ul>
+        </div>
+        <div class="register flex flex-row md:flex-row gap-4">
+          <button
+            type="submit"
+            class="px-7 py-2 border border-white rounded-lg"
+          >
+            Login
+          </button>
+          <button type="submit" class="px-7 py-2 bg-[#309689] rounded-lg">
+            Register
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero py-10 px-6 md:py-[100px] md:px-[166px] bg-black">
+      <div class="heading text-white text-center">
+        <h1 class="text-2xl md:text-3xl font-bold">
+          Find Your Dream Job Today!
+        </h1>
+        <p class="text-xs md:text-sm">
+          Connecting Talent with Opportunity: Your Gateway to Career Success.
+        </p>
+      </div>
+      <div
+        class="search flex flex-row md:flex-row justify-center items-center py-10"
+      >
+        <input
+          type="text"
+          placeholder="Job Title"
+          class="py-3 md:py-[25px] px-4 border rounded-l-xl md:rounded-l-xl text-center w-full md:w-auto"
+        />
+        <input
+          type="text"
+          placeholder="Select Location"
+          class="py-3 md:py-[25px] px-4 border text-center w-full md:w-auto"
+        />
+        <input
+          type="text"
+          placeholder="Select Category"
+          class="py-3 md:py-[25px] px-4 border text-center w-full md:w-auto"
+        />
+        <button
+          type="submit"
+          class="flex gap-3 justify-center items-center w-full py-3 md:py-[25px] px-4 border rounded-r-xl md:rounded-r-xl bg-[#309689] text-white"
+        >
+          <i class="fa fa-search" aria-hidden="true"></i> Search
+        </button>
+      </div>
+      <div
+        class="icons flex flex-row md:flex-row justify-between items-center md:px-20 gap-4"
+      >
+        <div class="icon-1 flex gap-4 items-center">
+          <div
+            class="flex justify-center items-center h-10 w-10 rounded-full bg-[#309689] text-white"
+          >
+            <i class="fa-solid fa-suitcase"></i>
+          </div>
+          <div
+            class="icon-content flex flex-col text-white text-center md:text-left"
+          >
+            <h1 class="font-bold">25,850</h1>
+            <p class="text-sm">Jobs</p>
+          </div>
+        </div>
+        <div class="icon-2 flex gap-4 items-center">
+          <div
+            class="flex justify-center items-center h-10 w-10 rounded-full bg-[#309689] text-white"
+          >
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <div
+            class="icon-content flex flex-col text-white text-center md:text-left"
+          >
+            <h1 class="font-bold">10,250</h1>
+            <p class="text-sm">Candidates</p>
+          </div>
+        </div>
+        <div class="icon-3 flex gap-4 items-center">
+          <div
+            class="flex justify-center items-center h-10 w-10 rounded-full bg-[#309689] text-white"
+          >
+            <i class="fa-regular fa-building"></i>
+          </div>
+          <div
+            class="icon-content flex flex-col text-white text-center md:text-left"
+          >
+            <h1 class="font-bold">10,250</h1>
+            <p class="text-sm">Companies</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- job cards -->
+
+    <section class="recent-jobs p-3 md:p-[60px] bg-white">
+      <div class="flex flex-col justify-center">
+        <div class="heading flex justify-center flex-col items-center">
+          <h1 class="text-3xl md:text-4xl font-bold text-center">
+            Recent Jobs Available
+          </h1>
+          <p class="text-xs text-center md:text-left">
+            At eu lobortis pretium tincidunt amet lacus ut aenean aliquet
+          </p>
+        </div>
+        <div class="view-btn flex justify-center items-center p-4">
+          <button type="button" title="btn" class="text-primary underline">
+            View all
+          </button>
+        </div>
+      </div>
+
+      <div class="job-cards border-b-2 border-primary my-6">
+        <div class="card p-3 h-auto w-auto flex flex-col gap-4">
+          <div class="badge flex justify-between items-center">
+            <p class="py-1 px-2 text-primary bg-[#e1e8e7] rounded-lg">
+              10 min ago
+            </p>
+            <span class="material-symbols-outlined"> bookmark_add </span>
+          </div>
+          <div class="description flex gap-4 items-center">
+            <div
+              class="logo h-8 text-center flex items-center justify-center w-8 rounded-full bg-primary text-white"
+            >
+              <i class="fa-brands fa-amazon"></i>
+            </div>
+            <div class="title">
+              <h1 class="text-xl font-semibold md:text-2xl md:font-bold">
+                Forward Security Director
+              </h1>
+              <p>Amazon</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="occupation flex gap-2 justify-between">
+              <div class="flex">
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined">
+                    business_center
+                  </span>
+                  Hotel & Tourism
+                </p>
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined"> schedule </span>
+                  Full-time
+                </p>
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined">
+                    account_balance_wallet
+                  </span>
+                  $40000 - $42000
+                </p>
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined"> location_on </span>
+                  New-York
+                </p>
+              </div>
+              <div class="flex justify-between gap-4">
+                <button
+                  type="button"
+                  title="btn"
+                  class="md:hidden border border-primary p-3 rounded-lg text-primary"
+                >
+                  Job Discription
+                </button>
+                <button
+                  type="button"
+                  title="btn"
+                  class="bg-primary p-3 rounded-lg text-white w-[93px]"
+                >
+                  Apply
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="job-cards border-b-2 border-primary my-6">
+        <div class="card p-3 h-auto w-auto flex flex-col gap-4">
+          <div class="badge flex justify-between items-center">
+            <p class="py-1 px-2 text-primary bg-[#e1e8e7] rounded-lg">
+              15 min ago
+            </p>
+            <span class="material-symbols-outlined"> bookmark_add </span>
+          </div>
+          <div class="description flex gap-4 items-center">
+            <div
+              class="logo h-8 text-center flex items-center justify-center w-8 rounded-full bg-primary text-white"
+            >
+              <i class="fa-brands fa-google"></i>
+            </div>
+            <div class="title">
+              <h1 class="text-xl font-semibold md:text-2xl md:font-bold">
+                Regional Creative Facilitator
+              </h1>
+              <p>Google</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="occupation flex gap-2 justify-between">
+              <div class="flex">
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined">
+                    business_center
+                  </span>
+                  Media
+                </p>
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined"> schedule </span>
+                  Part-time
+                </p>
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined">
+                    account_balance_wallet
+                  </span>
+                  $28000 - $32000
+                </p>
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined"> location_on </span>
+                  Los-Angeles, USA
+                </p>
+              </div>
+              <div class="flex justify-between gap-4">
+                <button
+                  type="button"
+                  title="btn"
+                  class="md:hidden border border-primary p-3 rounded-lg text-primary"
+                >
+                  Job Discription
+                </button>
+                <button
+                  type="button"
+                  title="btn"
+                  class="bg-primary p-3 rounded-lg text-white w-[93px]"
+                >
+                  Apply
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="job-cards border-b-2 border-primary my-6">
+        <div class="card p-3 h-auto w-auto flex flex-col gap-4">
+          <div class="badge flex justify-between items-center">
+            <p class="py-1 px-2 text-primary bg-[#e1e8e7] rounded-lg">
+              29 min ago
+            </p>
+            <span class="material-symbols-outlined"> bookmark_add </span>
+          </div>
+          <div class="description flex gap-4 items-center">
+            <div
+              class="logo h-8 text-center flex items-center justify-center w-8 rounded-full bg-primary text-white"
+            >
+              <i class="fa-brands fa-aws"></i>
+            </div>
+            <div class="title">
+              <h1 class="text-xl font-semibold md:text-2xl md:font-bold">
+                Frontend Developer
+              </h1>
+              <p>AWS</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="occupation flex gap-2 justify-between">
+              <div class="flex">
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined">
+                    business_center
+                  </span>
+                  Software Developer
+                </p>
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined"> schedule </span>
+                  Full-time
+                </p>
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined">
+                    account_balance_wallet
+                  </span>
+                  $74000 - $80000
+                </p>
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined"> location_on </span>
+                  San Jose, CA
+                </p>
+              </div>
+              <div class="flex justify-between gap-4">
+                <button
+                  type="button"
+                  title="btn"
+                  class="md:hidden border border-primary p-3 rounded-lg text-primary"
+                >
+                  Job Discription
+                </button>
+                <button
+                  type="button"
+                  title="btn"
+                  class="bg-primary p-3 rounded-lg text-white w-[93px]"
+                >
+                  Apply
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="job-cards border-b-2 border-primary my-6">
+        <div class="card p-3 h-auto w-auto flex flex-col gap-4">
+          <div class="badge flex justify-between items-center">
+            <p class="py-1 px-2 text-primary bg-[#e1e8e7] rounded-lg">
+              30 min ago
+            </p>
+            <span class="material-symbols-outlined"> bookmark_add </span>
+          </div>
+          <div class="description flex gap-4 items-center">
+            <div
+              class="logo h-8 text-center flex items-center justify-center w-8 rounded-full bg-primary text-white"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="title">
+              <h1 class="text-xl font-semibold md:text-2xl md:font-bold">
+                Full-stack Developer
+              </h1>
+              <p>Facebook</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="occupation flex gap-2 justify-between">
+              <div class="flex">
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined">
+                    business_center
+                  </span>
+                  Software Developer
+                </p>
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined"> schedule </span>
+                  Full-time
+                </p>
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined">
+                    account_balance_wallet
+                  </span>
+                  $40000 - $50000
+                </p>
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined"> location_on </span>
+                  New-York
+                </p>
+              </div>
+              <div class="flex justify-between gap-4">
+                <button
+                  type="button"
+                  title="btn"
+                  class="md:hidden border border-primary p-3 rounded-lg text-primary"
+                >
+                  Job Discription
+                </button>
+                <button
+                  type="button"
+                  title="btn"
+                  class="bg-primary p-3 rounded-lg text-white w-[93px]"
+                >
+                  Apply
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="job-cards border-b-2 border-primary my-6">
+        <div class="card p-3 h-auto w-auto flex flex-col gap-4">
+          <div class="badge flex justify-between items-center">
+            <p class="py-1 px-2 text-primary bg-[#e1e8e7] rounded-lg">
+              50 min ago
+            </p>
+            <span class="material-symbols-outlined"> bookmark_add </span>
+          </div>
+          <div class="description flex gap-4 items-center">
+            <div
+              class="logo h-8 text-center flex items-center justify-center w-8 rounded-full bg-primary text-white"
+            >
+              <i class="fa-brands fa-google"></i>
+            </div>
+            <div class="title">
+              <h1 class="text-xl font-semibold md:text-2xl md:font-bold">
+                Backend Developer
+              </h1>
+              <p>Google</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="occupation flex gap-2 justify-between">
+              <div class="flex">
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined">
+                    business_center
+                  </span>
+                  Software Developer
+                </p>
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined"> schedule </span>
+                  Full-time
+                </p>
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined">
+                    account_balance_wallet
+                  </span>
+                  $40000 - $42000
+                </p>
+                <p
+                  class="hidden md:flex md:items-center md:gap-2 text-primary md:py-2 md:px-3"
+                >
+                  <span class="material-symbols-outlined"> location_on </span>
+                  New-York
+                </p>
+              </div>
+              <div class="flex justify-between gap-4">
+                <button
+                  type="button"
+                  title="btn"
+                  class="md:hidden border border-primary p-3 rounded-lg text-primary"
+                >
+                  Job Discription
+                </button>
+                <button
+                  type="button"
+                  title="btn"
+                  class="bg-primary p-3 rounded-lg text-white w-[93px]"
+                >
+                  Apply
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Categories -->
+
+    <section class="category bg-secondary p-16">
+      <div class="heading flex flex-col gap-2">
+        <h1 class="text-3xl text-center md:text-4xl font-semibold">Browse by Category</h1>
+        <p class="text-xs text-center">At eu lobortis pretium tincidunt amet lacus ut aenean aliquet. Blandit a massa elementum id sceleri</p>
+      </div>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pt-20">
+        <div class="h-64 w-64 p-4 bg-white rounded-xl">
+          <div class="flex justify-center items-center h-full flex-col gap-6">
+            <i class="fa-brands fa-pagelines fa-2xl text-primary"></i>
+            <h1 class="font-bold">Agriculture</h1>
+            <p class="py-1 px-2 text-primary bg-[#e1e8e7] rounded-lg">
+              1254 jobs
+            </p>
+          </div>
+        </div>
+        <div class="h-64 w-64 p-4 bg-white rounded-xl">
+          <div class="flex justify-center items-center h-full flex-col gap-6">
+            <i class="fa-solid fa-drum-steelpan fa-2xl text-primary"></i>
+            <h1 class="font-bold">Metal Prouction</h1>
+            <p class="py-1 px-2 text-primary bg-[#e1e8e7] rounded-lg">
+              816 jobs
+            </p>
+          </div>
+        </div>
+        <div class="h-64 w-64 p-4 bg-white rounded-xl">
+          <div class="flex justify-center items-center h-full flex-col gap-6">
+            <i class="fa-solid fa-bag-shopping fa-2xl text-primary"></i>
+            <h1 class="font-bold">Commerce</h1>
+            <p class="py-1 px-2 text-primary bg-[#e1e8e7] rounded-lg">
+              2082 jobs
+            </p>
+          </div>
+        </div>
+        <div class="h-64 w-64 p-4 bg-white rounded-xl">
+          <div class="flex justify-center items-center h-full flex-col gap-6">
+            <i class="fa-solid fa-helmet-safety fa-2xl text-primary"></i>
+            <h1 class="font-bold">Construction</h1>
+            <p class="py-1 px-2 text-primary bg-[#e1e8e7] rounded-lg">
+              1520 jobs
+            </p>
+          </div>
+        </div>
+        <div class="h-64 w-64 p-4 bg-white rounded-xl">
+          <div class="flex justify-center items-center h-full flex-col gap-6">
+            <i class="fa-solid fa-plane fa-2xl text-primary"></i>
+            <h1 class="font-bold">Hotel and Tourism</h1>
+            <p class="py-1 px-2 text-primary bg-[#e1e8e7] rounded-lg">
+              1022 jobs
+            </p>
+          </div>
+        </div>
+        <div class="h-64 w-64 p-4 bg-white rounded-xl">
+          <div class="flex justify-center items-center h-full flex-col gap-6">
+            <i class="fa-solid fa-coins fa-2xl text-primary"></i>
+            <h1 class="font-bold">Financial Services</h1>
+            <p class="py-1 px-2 text-primary bg-[#e1e8e7] rounded-lg">
+              1496 jobs
+            </p>
+          </div>
+        </div>
+        <div class="h-64 w-64 p-4 bg-white rounded-xl">
+          <div class="flex justify-center items-center h-full flex-col gap-6">
+            <i class="fa-solid fa-bus fa-2xl text-primary"></i>
+            <h1 class="font-bold">Transport</h1>
+            <p class="py-1 px-2 text-primary bg-[#e1e8e7] rounded-lg">
+              986 jobs
+            </p>
+          </div>
+        </div>
+        <div class="h-64 w-64 p-4 bg-white rounded-xl">
+          <div class="flex justify-center items-center h-full flex-col gap-6">
+            <i class="fa-solid fa-graduation-cap fa-2xl text-primary"></i>
+            <h1 class="font-bold">Education</h1>
+            <p class="py-1 px-2 text-primary bg-[#e1e8e7] rounded-lg">
+              1453 jobs
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
